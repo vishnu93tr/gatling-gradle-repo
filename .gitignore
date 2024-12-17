@@ -76,3 +76,8 @@ desktop.ini
 
 # Gradle task-specific output
 *.gradle
+
+# Ignore generated JARs and large files
+build/libs/*.jar
+*.hprof
+
