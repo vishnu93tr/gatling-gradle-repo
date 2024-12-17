@@ -1,0 +1,78 @@
+# Gradle build directory
+/build/
+/out/
+
+# Gradle Wrapper files
+/gradle/wrapper/gradle-wrapper.jar
+/gradle/wrapper/gradle-wrapper.properties.lock
+/gradlew
+/gradlew.bat
+
+# Local Gradle caches and logs
+.gradle/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Java dependency cache
+**/build/libs/
+**/build/tmp/
+**/build/reports/
+**/build/generated/
+**/build/test-results/
+**/build/test-output/
+
+# IDE-specific files
+### IntelliJ ###
+.idea/
+*.iml
+*.ipr
+*.iws
+### Eclipse ###
+.project
+.classpath
+.settings/
+bin/
+
+# Logs
+*.log
+*.out
+*.pid
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# JAR and Binary Files
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.tar.bz2
+
+# Generated metadata
+*.class
+*.log
+
+# Test results
+/test-results/
+/test-output/
+
+# Temporary files
+*.tmp
+*.swp
+*.bak
+*~
+
+# Other
+/target/
+/node_modules/
+
+# Mac specific
+._*
+
+# Lock files
+*.lock
+
+# Gradle task-specific output
+*.gradle
