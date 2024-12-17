@@ -1,0 +1,41 @@
+plugins {
+    id 'io.gatling.gradle' version '3.9.5'
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
+}
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'simulations.BasicSimulation'
+        )
+    }
+}
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'io.gatling:gatling-core:3.9.5'
+    implementation 'io.gatling:gatling-http:3.9.5'
+    implementation 'io.gatling.highcharts:gatling-charts-highcharts:3.9.5'
+}
+
+shadowJar {
+    manifest {
+        attributes 'Main-Class': 'io.gatling.app.Gatling' // Gatling Launcher
+    }
+    archiveBaseName.set('gatling-simulation')
+    archiveVersion.set('1.0')
+    mergeServiceFiles() // Required to merge META-INF files
+}
+
+gatling {
+    toolVersion = '3.9.5'
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
